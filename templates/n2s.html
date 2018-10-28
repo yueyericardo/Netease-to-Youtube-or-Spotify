@@ -1,0 +1,113 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        
+        <meta name="viewport" content="width=device-width, initial-scale=0.5">
+
+        <link href="https://yueyericardo.github.io/articles/nkuchem/main.css" rel="stylesheet" type="text/css">
+        <title>Netease-to-Spotify</title>
+
+    <link rel="stylesheet" type="text/css" href="chrome-extension://fidicgekecdkdmkjghdgadgdmcfodfid/themes/default/content.css"></head>
+
+    <body>
+        <script>
+            if (/mobile/i.test(navigator.userAgent) || /android/i.test(navigator.userAgent))
+            {
+               document.body.classList.add('mobile');
+            }
+        </script>
+
+
+        {% if message %}
+        <p style="color:red">{{ message }}</p>
+        {% endif %}
+
+        <div class="inner">
+           
+        <h2>
+        <a id="user-content-netease-to-spotify" class="anchor" href="#netease-to-spotify" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Netease-to-Spotify</h2>
+        <p>Easily transfer your Netease music list to Spotify</p>
+        <ol>
+        <form action="/n2s" method="post">
+        <li> <p>Please input the playlist ID of your Netease music list. You can find the playlist ID from the link, <br> eg: https://music.163.com/#/playlist?id=9699105 </p></li>
+        <p style="text-indent: 50px;"><input name="playlistId" placeholder="PlaylistID" style="width: 184px; height:30px; font-size:13px; line-height:28px; border-radius:4px; text-align: center; transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;">
+            <button type="submit" class="button">Search</button>
+        </p>
+
+        </form>
+
+        <li>
+            Copy All the texts generated in the big box below
+        </li>
+        <p style="text-indent: 50px;">
+            <button id="copy" class="button" style="width: 250px;">Copy All the texts below
+            </button> 
+        </p>
+
+        <li>
+            <ul>
+            <li>
+                Go to <a class = " a green" href="http://spotlistr.herokuapp.com/#/search/textbox">spotlistr</a>, login to your Spotify account
+            </li>
+            <li>
+                Paste what you copied to the textbox on <a class = " a green" href="http://spotlistr.herokuapp.com/#/search/textbox">spotlistr</a>.
+            </li>
+            <li>
+                Go to the bottom of spotlistr, give it a name, and click create, and you are done.
+            </li>
+            </ul>
+        </li>
+        
+
+        <form action="/n2s" method="post">
+            <p id="result" style="border-radius: 16px;border: 1px solid #ccc!important;padding-left: 50px;padding-top: 10px;padding-bottom: 10px;">
+            {% for i in output %}
+            {{ i }}
+            <br>
+            {% endfor %}
+            </p>
+        </form>
+</ol>
+        </div>
+
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+        </script>
+        <p align="center" style="margin-top: 15px; font-size: 15px; ">Total 
+            <span id="busuanzi_container_page_pv">
+              <span id="busuanzi_value_page_pv">
+              </span> Hits
+            </span>
+        </p>    
+
+<script>
+    function copyArticle(event){
+        const range = document.createRange();
+        range.selectNode(document.getElementById('result'));
+
+        const selection = window.getSelection();
+        if(selection.rangeCount > 0) selection.removeAllRanges();
+        selection.addRange(range);
+        
+        document.execCommand('copy');
+    }
+
+    document.getElementById('copy').addEventListener('click', copyArticle, false);
+</script>
+
+    <!-- Statcounter code for Github
+        https://yueyericardo.github.io on NVU editor -->
+        <script type="text/javascript">
+            var sc_project=11731453; 
+            var sc_invisible=1; 
+            var sc_security="d6b0e1c7"; 
+        </script>
+        <script type="text/javascript"
+        src="https://www.statcounter.com/counter/counter.js"
+        async></script>
+        <noscript><div class="statcounter"><a title="Web Analytics
+            Made Easy - StatCounter" href="http://statcounter.com/"
+            target="_blank"><img class="statcounter"
+            src="//c.statcounter.com/11731453/0/d6b0e1c7/1/" alt="Web
+            Analytics Made Easy - StatCounter"></a></div></noscript>
+            <!-- End of Statcounter Code -->
+
+</body></html>
