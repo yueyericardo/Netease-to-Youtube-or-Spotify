@@ -2,8 +2,8 @@
 -----------------------------------------
 Web implement of Netease to Spotify.
 
-Original repo (python): @[bjason](https://github.com/bjason/163MusicToSpotify)
-API: @[mrdong916](https://github.com/mrdong916/DAPI)
+Original repo (python): [@bjason](https://github.com/bjason/163MusicToSpotify)  
+API: [@mrdong916](https://github.com/mrdong916/DAPI)
 
 
 1.  Input the playlist ID of your Netease music list. You can find the playlist ID from the link,  
@@ -21,8 +21,8 @@ API: @[mrdong916](https://github.com/mrdong916/DAPI)
 -----------------------------------------
 转移网易云歌单到Spotify的web实现
 
-元 repo (python): @[bjason](https://github.com/bjason/163MusicToSpotify)
-API: @[mrdong916](https://github.com/mrdong916/DAPI)
+源repo (python): [@bjason](https://github.com/bjason/163MusicToSpotify)  
+API: [@mrdong916](https://github.com/mrdong916/DAPI)
 
 1.  输入网易云的歌单ID  
 例如：https://music.163.com/#/playlist?id=9699105  
