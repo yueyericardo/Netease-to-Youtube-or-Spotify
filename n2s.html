@@ -1,0 +1,159 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.5">
+        <link href="./main.css" rel="stylesheet" type="text/css">
+        <title>Netease-to-Spotify</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <script>
+        if (/mobile/i.test(navigator.userAgent) || /android/i.test(navigator.userAgent))
+        {
+        document.body.classList.add('mobile');
+        document.body.button.classList.add('mobile');
+        document.textarea.classList.add('mobile');
+        }
+        </script>
+        
+        <div class="inner">
+            <h2>
+            <a id="user-content-netease-to-spotify" class="anchor" href="#netease-to-spotify" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Netease-to-Spotify</h2>
+            <p>Easily transfer your Netease music list to Spotify</p>
+            <ol>
+                <li>
+                    <p>Input the playlist ID of your Netease music list. You can find the playlist ID from the link, <br>eg: https://music.163.com/#/playlist?id=<code>9699105</code>
+                    </p>
+                </li>
+                <p style="text-align: center; text-decoration: blink;">
+                    <input id="playlistId" name="playlistId" placeholder="PlaylistID eg: 9699105" style="width: 184px; height:30px; font-size:13px; line-height:28px; border-radius:4px; text-align: center; transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;">
+                    <button id="submit" type="submit" class="button-netease">
+                    Search
+                    </button>
+                </p>
+                <p class="result">
+                    Playlist Name: <span id="plname" style="color: #E5001C; font-weight: bold;"></span>
+                    <br>
+                    Total songs: <span id="numsongs" style="color: #E5001C; font-weight: bold;"></span>
+                </p>
+                <li>
+                    Copy All the texts generated in the box below
+                </li>
+                <textarea id="output" name="result" class="textarea" style="border-radius: 16px;border: 1px solid #ccc!important;padding-left: 50px; padding-right: 30px;padding-top: 10px;padding-bottom: 10px; margin-top: 18px; width: 96%; height: 150px">
+                </textarea>
+                <p style="text-align: center">
+                    <button id="copy" class="button-netease" style="width: 180;">Click me to copy all text
+                    </button>
+                </p>
+                <li> Transfer to Spotify
+                    <ul>
+                        <li>
+                            Go to <a class = " a-spotify" target="_blank" href="http://spotlistr.herokuapp.com/#/search/textbox">Spotlistr</a>, login to your Spotify account
+                        </li>
+                        <li>
+                            Paste what you copied to the textbox on <a class = " a-spotify " target="_blank" href="http://spotlistr.herokuapp.com/#/search/textbox">Spotlistr</a>.
+                        </li>
+                        <li>
+                            Go to the bottom of spotlistr, give it a name, and click create, and you are done.
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+        </script>
+        <p align="center" style="margin-top: 15px; font-size: 15px; ">Total
+            <span id="busuanzi_container_page_pv">
+                <span id="busuanzi_value_page_pv">
+                </span> Hits
+            </span>
+        </p>
+        <!-- search and show -->
+        <script type="text/javascript">
+        $("#submit").click(function(){
+        var playlistId = $("#playlistId").val();
+        if(!playlistId){
+        playlistId = 9699105;
+        // alert('提交参数未填写');
+        }
+        var url = "https://api.hibai.cn/api/index/index";
+        var postContent = {"TransCode":"020111","OpenId":"123456789","Body":{"SongListId":"9699105"}};
+        postContent.Body.SongListId=playlistId.toString();
+        $.ajax({
+        type: "POST",
+        url: url,
+        dataType: 'json',
+        data: postContent,
+        success: function(result){
+        console.log(result); // 'name', 'age', 'city'
+        var list = [];
+        // if data["ErrCode"] != "OK":
+        // print(data["ErrCode"])
+        // print(errRetrive)
+        // print(help)
+        var body = result.Body;
+        var playlistName = body.name;
+        var tracks = body.songs;
+        console.log(body);
+        console.log(playlistId);
+        console.log(tracks);
+        console.log(tracks.length);
+        
+        for (i=0; i<tracks.length; i++){
+            var title = tracks[i].title;
+            var author = tracks[i].author;
+            var custom = title +' - '+ author +'\n' ;
+            list.push(custom);
+            }
+            
+            console.log(list);
+            console.log(list);
+            list = list.join("");
+            $("#output").val(list);
+            $('#plname').text(playlistName);
+            $('#numsongs').text(tracks.length);
+            return false;
+            },
+            error: function(request) {
+            alert("Connection error");
+            return false;
+            }
+            });
+            }
+            );
+            </script>
+            <!-- copy -->
+            <script>
+            function copyArticle(event){
+            const range = document.createRange();
+            range.selectNode(document.getElementById('output'));
+            const selection = window.getSelection();
+            if(selection.rangeCount > 0) selection.removeAllRanges();
+            selection.addRange(range);
+            
+            document.execCommand('copy');
+            }
+            document.getElementById('copy').addEventListener('click', copyArticle, false);
+            </script>
+            
+            <!-- Statcounter code for Github
+            https://yueyericardo.github.io on NVU editor -->
+            <script type="text/javascript">
+            var sc_project=11731453;
+            var sc_invisible=1;
+            var sc_security="d6b0e1c7";
+            </script>
+            <script type="text/javascript"
+            src="https://www.statcounter.com/counter/counter.js"
+            async></script>
+            <noscript>
+            <div class="statcounter">
+                <a title="Web Analytics
+                    Made Easy - StatCounter" href="http://statcounter.com/"
+                    target="_blank"><img class="statcounter"
+                src="//c.statcounter.com/11731453/0/d6b0e1c7/1/" alt="Web Analytics Made Easy - StatCounter"></a>
+            </div>
+            </noscript>
+            <!-- End of Statcounter Code -->
+        </body>
+    </html>
