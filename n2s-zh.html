@@ -23,45 +23,46 @@
                 <a target="_blank" href="https://github.com/yueyericardo/Netease-to-Spotify">Source Code</a> &nbsp;/&nbsp;
                 <a target="_blank" href="https://github.com/mrdong916/DAPI">API</a> &nbsp;/&nbsp;
                 <a target="_blank" href="https://github.com/bjason/163MusicToSpotify">Reference</a> &nbsp;/&nbsp;
-                <a href="./n2s-zh.html"> 中文 </a>                
+                <a href="./n2s.html"> English </a>                
             </p>
-            <p>Easily transfer your Netease music list to Spotify</p>
+            <p>迁移你的网易云歌单到Spotify</p>
             <ol>
                 <li>
-                    <p>Input the playlist ID of your Netease music list. You can find the playlist ID from the link, <br>eg: <a target="_blank" href="https://music.163.com/#/playlist?id=9699105">https://music.163.com/#/playlist?id=9699105</a>
-                    <br>Playlist ID = <code>9699105</code>
+                    <p>输入网易云的歌单ID
+                        <br>例如：<a target="_blank" href="https://music.163.com/#/playlist?id=9699105">https://music.163.com/#/playlist?id=9699105</a>
+                        <br>ID就是<code>9699105</code>
                     </p>
                 </li>
                 <p style="text-align: center; text-decoration: blink;">
-                    <input id="playlistId" name="playlistId" placeholder="PlaylistID eg: 9699105" style="width: 184px; height:30px; font-size:13px; line-height:28px; border-radius:4px; text-align: center; transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;">
+                    <input id="playlistId" name="playlistId" placeholder="9699105" style="width: 184px; height:30px; font-size:13px; line-height:28px; border-radius:4px; text-align: center; transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;">
                     <button id="submit" type="submit" class="button-netease">
                     Search
                     </button>
                 </p>
                 <p class="result">
-                    Playlist Name: <span id="plname" style="color: #E5001C; font-weight: bold;"></span>
+                    歌单名: <span id="plname" style="color: #E5001C; font-weight: bold;"></span>
                     <br>
-                    Total songs: <span id="numsongs" style="color: #E5001C; font-weight: bold;"></span>
+                    曲目数: <span id="numsongs" style="color: #E5001C; font-weight: bold;"></span>
                 </p>
                 <li>
-                    Copy All the texts generated in the box below
+                    复制下面所生成的文字版歌单
                 </li>
                 <textarea id="output" name="result" class="textarea" style="border-radius: 16px;border: 1px solid #ccc!important;padding-left: 50px; padding-right: 30px;padding-top: 10px;padding-bottom: 10px; margin-top: 18px; width: 96%; height: 150px">
                 </textarea>
                 <p style="text-align: center">
-                    <button id="copy" class="button-netease" style="width: 180;">Click me to copy all text
+                    <button id="copy" class="button-netease" style="width: 180;">点我复制
                     </button>
                 </p>
-                <li> Transfer to Spotify
+                <li> 转移到Spotify
                     <ul>
                         <li>
-                            Go to <a class = " a-spotify" target="_blank" href="http://spotlistr.herokuapp.com/#/search/textbox">Spotlistr</a>, login to your Spotify account
+                            进入 <a class = " a-spotify" target="_blank" href="http://spotlistr.herokuapp.com/#/search/textbox">Spotlistr</a>, 登陆
                         </li>
                         <li>
-                            Paste what you copied to the textbox on <a class = " a-spotify " target="_blank" href="http://spotlistr.herokuapp.com/#/search/textbox">Spotlistr</a>.
+                            粘贴刚刚复制的内容到 <a class = " a-spotify " target="_blank" href="http://spotlistr.herokuapp.com/#/search/textbox">Spotlistr</a>.
                         </li>
                         <li>
-                            Go to the bottom of spotlistr, give it a name, and click create, and you are done.
+                            页面底部，给歌单起名，Create，Done
                         </li>
                     </ul>
                 </li>
