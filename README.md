@@ -1,6 +1,6 @@
 Netease-to-Spotify
 ----------------------------------------- 
-[http://yyrcd.com/n2s](http://yyrcd.com/n2s/n2s.html)  
+[https://yyrcd.com/n2s](https://yyrcd.com/n2s)  
 Web implement of Netease to Spotify. 
 
 Original repo (python): [@bjason](https://github.com/bjason/163MusicToSpotify)  
