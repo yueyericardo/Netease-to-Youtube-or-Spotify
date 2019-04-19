@@ -2,7 +2,7 @@
 -----------------------------------------  
 [https://yyrcd.com/2018/11/14/n2s-zh/](https://yyrcd.com/2018/11/14/n2s-zh/)  
 转移网易云歌单到YoutubeMusic, Spotify, AppleMusic的web实现
-![](https://yyrcd-1256568788.cos.na-siliconvalley.myqcloud.com/yyrcd/2019-04-19-192055.png)
+![](https://yyrcd-1256568788.cos.na-siliconvalley.myqcloud.com/yyrcd/2019-04-19-192138.png)
 <br>
 
 Netease-to-YoutubeMusic-Spotify-AppleMusic
