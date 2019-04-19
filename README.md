@@ -22,7 +22,7 @@ https://bs.yyrcd.com/music/?uid=10115387&type=0
 https://bs.yyrcd.com/music/?uid=10115387&type=0
 uid改为你自己或者TA的
 typo=0代表total time  
-typo=1代表Last time  
+typo=1代表Last Week
 ```
 时刻关注TA的听歌动向
 ![](https://yyrcd-1256568788.cos.na-siliconvalley.myqcloud.com/yyrcd/2019-04-19-191949.png)
