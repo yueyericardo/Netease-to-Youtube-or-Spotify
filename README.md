@@ -11,7 +11,7 @@ Netease-to-YoutubeMusic-Spotify-AppleMusic
 Web implement of transfering Netease Music list `to` YoutubeMusic, Spotify, AppleMusic.
 
 Original repo (python): [@bjason](https://github.com/bjason/163MusicToSpotify)  
-API: [@mrdong916](https://github.com/mrdong916/DAPI)
+API: [@Binaryify](https://binaryify.github.io/NeteaseCloudMusicApi/#/)
 
 
 PS:另一个小项目
