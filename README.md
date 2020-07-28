@@ -16,13 +16,8 @@ API: [@Binaryify](https://binaryify.github.io/NeteaseCloudMusicApi/#/)
 
 PS:另一个小项目
 ----------------------------------------
-https://bs.yyrcd.com/music/?uid=10115387&type=0
-
-```
-https://bs.yyrcd.com/music/?uid=10115387&type=0
-uid改为你自己或者TA的
-typo=0代表total time  
-typo=1代表Last Week
-```
-时刻关注TA的听歌动向
+https://music.yyrcd.com/music/?uid=10115387&type=1  
+uid 为 userid  
+type=0代表total time    
+type=1代表Last Week  
 ![](https://yyrcd-1256568788.cos.na-siliconvalley.myqcloud.com/yyrcd/2019-04-19-191949.png)
